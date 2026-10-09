@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# Company data: everything produced FROM the tenant stays out of the repository.
+# Only the scripts, tests and docs are published.
+# ---------------------------------------------------------------------------
+
+# data\export  = TMDL definitions of the real semantic models (M / SQL code, server names, lineage)
+# data\sources = one query file per table + model_sources.xlsx / .csv (server names, SQL objects, schemas)
+/data/
+
+# The same outputs, wherever a run may have put them (-OutputPath / -ExportPath elsewhere in the tree)
+*.SemanticModel/
+model_sources.csv
+model_sources.xlsx
+_export_report.csv
+.semantic-model-tools
+model_sources.html
+*.pq
+*.dax
+**/power-query/
+**/dax/
+**/sql/
+**/_shared/
+
+# Owner-specific notes for Claude Code (the published .claude/CLAUDE.md is for contributors)
+CLAUDE.local.md
+
+# Anything named like a secret or a local environment
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Local tooling noise
+# ---------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.tmp
+*.log
+*.bak
+~$*.xlsx
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+.claude/settings.local.json
+.claude/worktrees/
